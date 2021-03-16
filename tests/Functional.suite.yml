@@ -5,7 +5,7 @@ modules:
         - Asserts
         - Symfony:
             app_path: 'src'
-            environment: 'test'
+            environment: 'foo'
             mailer: 'symfony_mailer'
         - Doctrine2:
             depends: Symfony

@@ -6,6 +6,7 @@ use App\Controller\DashboardController;
 use App\Controller\HomeController;
 use App\Controller\RegistrationController;
 use App\Controller\SecurityController;
+use App\Controller\EnvironmentController;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
 return static function (RoutingConfigurator $routes): void {
@@ -28,5 +29,9 @@ return static function (RoutingConfigurator $routes): void {
 
     $routes->add('app_register', '/register')
         ->controller(RegistrationController::class)
+        ->methods(['GET', 'POST']);
+
+    $routes->add('app_environment', '/environment')
+        ->controller(EnvironmentController::class)
         ->methods(['GET', 'POST']);
 };
